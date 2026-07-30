@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Music Event Ticketing</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="create_users.html">Register</a>
+    <a href="ticket_form.html">Book Ticket</a>
+    <a href="view.php">View Bookings</a>
+    <a href="logout.php">Logout</a>
+  </nav>
+
+  <h2>Music Event Ticket Booking</h2>
+  <form action="process_ticket.php" method="post">
+    Name: <input type="text" name="customer_name" placeholder="Enter your full name" required><br><br>
+    Phone: <input type="text" name="phone" placeholder="e.g. 0712345678" required><br><br>
+    Email: <input type="email" name="email" placeholder="e.g. you@mail.com" required><br><br>
+
+    Event:
+    <select name="event_name" id="event_name" onchange="setVenue()" required>
+      <option value="">--Select Event--</option>
+      <option value="Summer Jam">Summer Jam</option>
+      <option value="Rock Fiesta">Rock Fiesta</option>
+      <option value="Jazz Night">Jazz Night</option>
+      <option value="HipHop Live">HipHop Live</option>
+    </select><br><br>
+
+    Venue: <input type="text" name="venue" id="venue" placeholder="Venue auto-fills here" readonly required><br><br>
+    Date: <input type="date" name="event_date" required><br><br>
+
+    Ticket:
+    <select name="ticket_type" id="ticket_type" onchange="setPrice()" required>
+      <option value="">--Select Ticket Type--</option>
+      <option value="Regular">Regular</option>
+      <option value="VIP">VIP</option>
+      <option value="VVIP">VVIP</option>
+    </select><br><br>
+
+    Price: <input type="text" id="price" name="price" placeholder="Price will appear here" readonly><br><br>
+    Quantity: <input type="number" name="ticket_count" placeholder="Enter number of tickets" min="1" required><br><br>
+    Discount: <input type="text" name="discount_code" placeholder="Enter discount code (optional)"><br><br>
+
+    Payment:
+    <input type="radio" name="payment" value="Cash" required> Cash
+    <input type="radio" name="payment" value="Card" required> Card
+    <input type="radio" name="payment" value="Mpesa" required> Mpesa<br><br>
+
+    Notes: <textarea name="notes" rows="3" cols="30" placeholder="Any special requests..."></textarea><br><br>
+
+    <button type="submit">Book Now</button>
+    <button type="reset">Clear</button>
+  </form>
+</body>
+</html>

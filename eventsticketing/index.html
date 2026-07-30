@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MusicApp Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="create_users.html">Register</a>
+    <a href="ticket_form.html">Book Ticket</a>
+    <a href="view.php">View Bookings</a>
+    <a href="logout.php">Logout</a>
+  </nav>
+
+  <h1>Welcome to MusicApp</h1>
+  <p>Please login to continue, or <a href="create_users.html">register here</a>.</p>
+
+  <form method="post" action="login.php">
+    Username: <input type="text" name="username" required><br><br>
+    Password: <input type="password" name="password" required><br><br>
+    <input type="submit" value="Login">
+    <input type="reset" value="Reset">
+  </form>
+</body>
+</html>

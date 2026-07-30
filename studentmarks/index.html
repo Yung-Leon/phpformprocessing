@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Student Marks Form</h2>
+
+    <form action="process_marks.php" method="post">
+        Name: <input type="text" name="student_name" placeholder="Enter Student Name" required><br><br>
+        Reg No: <input type="text" name="reg_no" placeholder="Enter Reg No" required><br><br>
+        Course: <input type="text" name="course_title" placeholder="Enter Course" required><br><br>
+
+        Introduction To Business: <input type="number" name="unit1" min="0" max="100" required><br><br>
+        Management Accounts: <input type="number" name="unit2" min="0" max="100" required><br><br>
+        Intro to Programming: <input type="number" name="unit3" min="0" max="100" required><br><br>
+        Computer Graphics: <input type="number" name="unit4" min="0" max="100" required><br><br>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Clear</button>
+    </form>
+</body>
+</html>
